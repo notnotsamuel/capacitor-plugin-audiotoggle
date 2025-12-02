@@ -1,4 +1,4 @@
-import { AudioToggle } from 'capacitor-plugin-audiotoggle';
+import { AudioToggle } from '@notnotsamuel/capacitor-plugin-audiotoggle';
 
 window.setAudioMode = (mode) => {
     AudioToggle.setAudioMode({ mode })

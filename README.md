@@ -5,14 +5,14 @@ A Capacitor plugin to override the iOS silent switch and control audio routing b
 ## Install
 
 ```bash
-npm install capacitor-plugin-audiotoggle
+npm install @notnotsamuel/capacitor-plugin-audiotoggle
 npx cap sync
 ```
 
 ## Usage
 
 ```typescript
-import { AudioToggle } from 'capacitor-plugin-audiotoggle';
+import { AudioToggle } from '@notnotsamuel/capacitor-plugin-audiotoggle';
 
 await AudioToggle.setAudioMode({ mode: 'speaker' });
 ```
