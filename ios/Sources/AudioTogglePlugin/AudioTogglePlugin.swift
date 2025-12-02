@@ -1,5 +1,6 @@
 import Foundation
 import Capacitor
+import AVFoundation
 
 /**
  * Please read the Capacitor iOS Plugin Development Guide
@@ -10,14 +11,21 @@ public class AudioTogglePlugin: CAPPlugin, CAPBridgedPlugin {
     public let identifier = "AudioTogglePlugin"
     public let jsName = "AudioToggle"
     public let pluginMethods: [CAPPluginMethod] = [
-        CAPPluginMethod(name: "echo", returnType: CAPPluginReturnPromise)
+        CAPPluginMethod(name: "setAudioMode", returnType: CAPPluginReturnPromise)
     ]
     private let implementation = AudioToggle()
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
+    @objc func setAudioMode(_ call: CAPPluginCall) {
+        guard let mode = call.getString("mode") else {
+            call.reject("mode is required")
+            return
+        }
+
+        do {
+            try implementation.setAudioMode(mode: mode)
+            call.resolve()
+        } catch let error {
+            call.reject("Failed to set audio mode: \(error.localizedDescription)")
+        }
     }
 }

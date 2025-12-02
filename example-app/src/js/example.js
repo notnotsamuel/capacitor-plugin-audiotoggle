@@ -1,6 +1,7 @@
 import { AudioToggle } from 'capacitor-plugin-audiotoggle';
 
-window.testEcho = () => {
-    const inputValue = document.getElementById("echoInput").value;
-    AudioToggle.echo({ value: inputValue })
-}
+window.setAudioMode = (mode) => {
+    AudioToggle.setAudioMode({ mode })
+        .then(() => console.log(`Audio mode set to ${mode}`))
+        .catch((error) => console.error('Failed to set audio mode', error));
+};

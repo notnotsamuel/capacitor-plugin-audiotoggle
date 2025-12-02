@@ -16,9 +16,12 @@
         This project can be used to test out the functionality of your plugin. Nothing in the
         <em>example-app/</em> folder will be published to npm when using this template, so you can create away!
       </p>
-      <label for="echoInput">Echo Text:</label>
-      <input type="text" id="echoInput" name="echoInput" value="Hello World!" />
-      <button onclick="testEcho()">Click Me!</button>
+      <div>
+        <p>Toggle audio mode:</p>
+        <button onclick="setAudioMode('speaker')">Speaker</button>
+        <button onclick="setAudioMode('earpiece')">Earpiece</button>
+        <button onclick="setAudioMode('normal')">Normal</button>
+      </div>
     </main>
 
     <script src="./js/example.js" type="module"></script>
