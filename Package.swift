@@ -2,11 +2,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "CapacitorPluginAudiotoggle",
+    name: "NotnotsamuelCapacitorPluginAudiotoggle",
     platforms: [.iOS(.v14)],
     products: [
         .library(
-            name: "CapacitorPluginAudiotoggle",
+            name: "NotnotsamuelCapacitorPluginAudiotoggle",
             targets: ["AudioTogglePlugin"])
     ],
     dependencies: [
