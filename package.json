@@ -1,6 +1,6 @@
 {
   "name": "@notnotsamuel/capacitor-plugin-audiotoggle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Capacitor plugin to toggle audio output between the speaker and earpiece, enabling audio playback even when the iOS silent switch is active.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
